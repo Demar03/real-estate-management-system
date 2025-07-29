@@ -1,24 +1,224 @@
-# Real-Estate-Management-System-using-NodeJS-Express-MongoDB
+# 🏠 Real Estate Management System
 
-[![Not Maintained](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-4.18.x-blue.svg)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-6.x-green.svg)](https://mongodb.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.x-purple.svg)](https://getbootstrap.com/)
 
+A modern, comprehensive real estate management system built with Node.js, Express, MongoDB, and Bootstrap 5. This application provides an intuitive interface for real estate agencies to manage properties, customers, transactions, and more.
 
-### The real estate management system is a web application designed for any real estate agency, which has an intuitive and effortless to use to interface for both its agency owner and its customers. Here owners can log in with their given ID and password in order to manage the website. The owner can post the property that needs to be sold by the agency in the property listings. The customers of the agency can register and log into the website. Here the customers can browse through various properties listed on the website which enable the customer to find the property as per his/her requirements
+## ✨ Features
 
-## ABSTRACT
-Nowadays everything is automated using computer systems, so many companies are developing web applications to provide online services to their customers. Real Estate Management System is an online web application developed for real estate builders and their customers to handle real estate consultations between the buyer and seller. This is a simple yet efficient management system to manage records of properties instead of using traditional methods to manage data like manual records or file systems. This system provides an added benefit to its customers since they no longer need to depend upon an intermediary agent who can help to find the required property. Also, their customers can always be in the comfort of their homes to check the various properties listed in the website as to their choice. Hence reducing the cost, saving time and increasing the comfort of their customers.In the case of a traditional method where the sales and purchase records are stored manually through registers or file systems which is very time consuming and inefficient. Moreover, in this kind of management, there is lots of paperwork involved for the generation of bills, reports, invoices for every transaction which needs to be sorted and maintained manually which are prone to human errors and may lead to problems like misplacing. The management of these manual records is very hard, productivity is lost using manual records, searching of manual records is tedious, the security of records is unreliable.This real estate management system is a digitalized web-based application where the entire records are maintained by the database management system itself. It provides an intuitive user interface, which is easy to use, for both the real estate builders and their customers. It will reduce manual work and helps the builder to save the records related to the details of customers, properties, transactions efficiently. Any calculations involved in the transactions will be automated increasing the work pace of the system and also reduces the possibilities of incidents of human mistakes.
+- **🏠 Property Management**: List, update, and manage property inventory
+- **👥 Customer Management**: Manage customer profiles and registrations
+- **💰 Transaction Tracking**: Monitor all financial transactions and payments
+- **📋 Registration System**: Handle property registrations efficiently
+- **🏦 Loan Management**: Track loan applications and financing options
+- **⭐ Testimonials**: Showcase customer reviews and testimonials
+- **❌ Cancellation Handling**: Manage property cancellations and refunds
+- **📊 Dashboard Analytics**: Comprehensive management dashboard
+- **🎨 Modern UI**: Beautiful, responsive design with Bootstrap 5
+- **📱 Mobile Responsive**: Works perfectly on all devices
 
-## INTRODUCTION
+## 🚀 Quick Start
 
-The real estate management system is a web application designed for any real estate agency, which has an intuitive and effortless to use to interface for both its agency owner and its customers. Here owners can log in with their given ID and password in order to manage the website. The owner can post the property that needs to be sold by the agency in the property listings. The customers of the agency can register and log into the website. Here the customers can browse through various properties listed on the website which enable the customer to find the property as per his/her requirements.Customers can search properties in the property listings and can then view the complete specification of each property listing with its features, location, price, etc. according to their requirements and can buy the property by initiating a registration with the property. Then the customer needs to pay the agency the price of the property that the customer wants to purchase. After successful completion of the transaction process, the property gets registered under the customer's name and the money gets wired to the agency owner. If the customer in case wants to cancel a purchase, they have made with the agency they can carry out a cancellation where the amount of the purchase will be refunded back to the customer and the property gets relisted in the owner's property listings. This method greatly enhances the speed of any process and reduces the overhead of documentation. The agency owner also provides details concerning the home loans provided by various banks which can be inquired by the customer by accessing the respective website of the bank provided by the owner. Being a web application, the agency can showcase the testimonials of its customers who have purchased a property from the agency using this real management application.
+### Prerequisites
 
-![Webpage Scrsht](https://github.com/Defcon27/Real-Estate-Management-System-using-NodeJS-Express-MongoDB/blob/master/scrshts/home.jpg)
+- **Node.js** (version 14.0.0 or higher)
+- **npm** (version 6.0.0 or higher)
+- **MongoDB** (version 4.4 or higher)
 
-### ER DIAGRAM FOR DATABASE
-![er diagram](https://github.com/Defcon27/Real-Estate-Management-System-using-NodeJS-Express-MongoDB/blob/master/scrshts/er.jpg)
+### Installation
 
-### NOTE:
-- Install all the dependencies with the `Node Package Manager(npm)` listed in the `dependencies.json` file
-- Run `app.js` to initiate the website
-- Port of running server is `3000`
-- `MongoDB` connect automatically to `27017`
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd Real-Estate-Management-System-using-NodeJS-Express-MongoDB
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   # MongoDB Connection String
+   DB_PATH=mongodb://localhost:27017/real_estate_db
+   
+   # Server Configuration
+   PORT=3000
+   NODE_ENV=development
+   
+   # Application Settings
+   APP_NAME=Real Estate Management System
+   APP_VERSION=2.0.0
+   ```
+
+4. **Start MongoDB**
+   
+   Make sure MongoDB is running on your system:
+   ```bash
+   # On Windows
+   net start MongoDB
+   
+   # On macOS/Linux
+   sudo systemctl start mongod
+   ```
+
+5. **Run the application**
+   ```bash
+   # Development mode (with auto-reload)
+   npm run dev
+   
+   # Production mode
+   npm start
+   ```
+
+6. **Access the application**
+   
+   Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+## 📁 Project Structure
+
+```
+Real-Estate-Management-System-using-NodeJS-Express-MongoDB/
+├── app.js                 # Main application file
+├── package.json           # Dependencies and scripts
+├── .env                   # Environment variables
+├── controllers/           # Business logic controllers
+├── models/               # MongoDB schemas and models
+├── routes/               # Express routes
+├── views/                # Handlebars templates
+│   ├── layout.hbs        # Main layout template
+│   ├── owner/            # Owner-specific views
+│   └── customer/         # Customer-specific views
+├── public/               # Static assets (CSS, JS, images)
+└── records/              # JSON data files
+```
+
+## 🛠️ Technology Stack
+
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB with Mongoose ODM
+- **Frontend**: Bootstrap 5, Handlebars templating
+- **Icons**: Font Awesome 6
+- **Fonts**: Google Fonts (Inter)
+- **Development**: Nodemon for auto-reload
+
+## 🔧 Configuration
+
+### Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `DB_PATH` | MongoDB connection string | `mongodb://localhost:27017/real_estate_db` |
+| `PORT` | Server port | `3000` |
+| `NODE_ENV` | Environment mode | `development` |
+
+### Database Setup
+
+The application will automatically create the following collections in MongoDB:
+- `customers` - Customer information
+- `properties` - Property listings
+- `transactions` - Financial transactions
+- `registrations` - Property registrations
+- `loans` - Loan applications
+- `testimonials` - Customer testimonials
+- `cancellations` - Cancellation records
+
+## 🎨 UI/UX Improvements
+
+### Version 2.0.0 Updates
+
+- **Modern Design**: Updated to Bootstrap 5 with custom styling
+- **Responsive Layout**: Mobile-first responsive design
+- **Enhanced Navigation**: Improved navigation with icons and better UX
+- **Dashboard Cards**: Beautiful card-based dashboard layout
+- **Color Scheme**: Professional color palette with CSS variables
+- **Animations**: Smooth hover effects and transitions
+- **Typography**: Modern Inter font family
+- **Icons**: Font Awesome 6 icons throughout the interface
+
+## 🚀 Available Scripts
+
+```bash
+npm start          # Start the application
+npm run dev        # Start in development mode with auto-reload
+npm install        # Install dependencies
+```
+
+## 📊 Features Overview
+
+### Owner Dashboard
+- **Property Management**: Add, edit, and manage property listings
+- **Customer Management**: View and manage customer information
+- **Transaction Tracking**: Monitor all financial transactions
+- **Registration System**: Handle property registrations
+- **Loan Applications**: Manage loan requests and approvals
+- **Testimonials**: Display customer reviews and feedback
+- **Cancellation Handling**: Process cancellations and refunds
+
+### Customer Features
+- **Property Browsing**: Search and view available properties
+- **Registration**: Register for property purchases
+- **Loan Information**: Access loan and financing details
+- **Transaction History**: View personal transaction records
+
+## 🔒 Security Features
+
+- Input validation and sanitization
+- MongoDB injection protection
+- Secure session management
+- Error handling and logging
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **MongoDB Connection Error**
+   - Ensure MongoDB is running
+   - Check connection string in `.env` file
+   - Verify MongoDB installation
+
+2. **Port Already in Use**
+   - Change PORT in `.env` file
+   - Kill existing process on port 3000
+
+3. **Module Not Found Errors**
+   - Run `npm install` to install dependencies
+   - Clear `node_modules` and reinstall
+
+### Development Tips
+
+- Use `npm run dev` for development with auto-reload
+- Check console logs for detailed error messages
+- Use browser developer tools for frontend debugging
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 📞 Support
+
+For support and questions:
+- Create an issue on GitHub
+- Check the troubleshooting section
+- Review the documentation
+
+---
+
+**Built with ❤️ using Node.js, Express, MongoDB, and Bootstrap 5**
